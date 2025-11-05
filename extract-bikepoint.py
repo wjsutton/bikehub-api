@@ -50,4 +50,3 @@ if count == max_tries:
     print('Connection failed')
 else:
     print('Connection successful')
-
