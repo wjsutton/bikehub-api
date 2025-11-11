@@ -25,8 +25,8 @@ jobs:
   
       - name: Run Python Script
         env: 
-          aws_access_key: ${{secrets.AWS_ACCESS_KEY}}
-          aws_secret_key: ${{secrets.AWS_SECRET_ACCESS_KEY}}
-          bucket: ${{secrets.BUCKET}}
+          AWS_ACCESS_KEY: ${{secrets.AWS_ACCESS_KEY}}
+          AWS_SECRET_ACCESS_KEY: ${{secrets.AWS_SECRET_ACCESS_KEY}}
+          BUCKET: ${{secrets.BUCKET}}
         run: python main.py
         
