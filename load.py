@@ -21,13 +21,13 @@ def load():
     )
 
     # checking for any high level errors
-    try:
-        # checking access to the s3
-        try:
-            s3_client.list_objects_v2(Bucket=bucket)
-        except:
-            print('Access denied')
-            sys.exit(1)
+    # try:
+    #     # checking access to the s3
+    #     try:
+    #         s3_client.list_objects_v2(Bucket=bucket)
+    #     except:
+    #         print('Access denied')
+    #         sys.exit(1)
         
         # looping for each file in the data folder
         dir = 'data'
@@ -38,7 +38,7 @@ def load():
             # if there are files uploads to s3 and removes for data folder
             filename = dir+'/'+file[0]
             s3filename = file[0]
-            s3_client.upload_file(filename, bucket, s3filename)
+            s3_client.upload_file(filename, bucket, 'python-import/'+ s3filename)
             os.remove(filename)
         else:
             # if no prints fail message
