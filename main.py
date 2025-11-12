@@ -1,3 +1,13 @@
+print('packages imported')
+import requests as r
+import time as t
+from datetime import datetime as dt
+import json 
+import os
+import boto3
+import sys
+from dotenv import load_dotenv 
+
 from extract_bikepoint import extract
 from load import load
 print('loading functions')
