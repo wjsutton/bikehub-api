@@ -28,7 +28,8 @@ def load():
     #     except:
     #         print('Access denied')
     #         sys.exit(1)
-        
+
+    try:
         # looping for each file in the data folder
         dir = 'data'
         file = [f for f in os.listdir(dir) if f.endswith('.json')]
